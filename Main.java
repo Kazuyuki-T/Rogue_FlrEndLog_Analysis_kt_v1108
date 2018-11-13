@@ -27,7 +27,7 @@ public class Main {
         for(int i=0; i < csvName.length; i++){
             System.out.println("start - " + csvName[i]);
             divideCsvFile(csvName[i], mode);
-            System.out.println("end");
+            System.out.println("end - "+ csvName[i]);
         }
     }
     
