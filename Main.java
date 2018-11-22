@@ -35,11 +35,16 @@ public class Main {
         // 格納フォルダの作成
         String[] csvName = csvFile.split("\\.", 0);
         File dir = new File(csvName[0]);
-        if(dir.mkdir() == true){
-            // succece
+        
+        if(dir.exists() == true) {
+            // フォルダが存在するため，何もしない
         } else {
-            System.out.println("フォルダの作成に失敗しました");
-            System.exit(0);
+            if(dir.mkdir() == true){
+                // succece
+            } else {
+                System.out.println("フォルダの作成に失敗しました");
+                System.exit(0);
+            }
         }
         
         BufferedReader br = null; // 読み込み文章
